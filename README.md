@@ -10,12 +10,12 @@ The objective is to identify key factors influencing employee attrition and buil
 
 ## Tools & Technologies
 
-- Python
-- Pandas
-- Matplotlib
-- MySQL
-- Power BI
-- Scikit-Learn
+* Python
+* Pandas
+* Matplotlib
+* MySQL
+* Power BI
+* Scikit-Learn
 
 ---
 
@@ -26,8 +26,9 @@ IBM HR Analytics Employee Attrition Dataset
 Total Employees: 1470
 
 Target Variable:
-- 0 = Employee Stayed
-- 1 = Employee Left
+
+* 0 = Employee Stayed
+* 1 = Employee Left
 
 ---
 
@@ -35,18 +36,18 @@ Target Variable:
 
 Performed analysis on:
 
-- Attrition Distribution
-- Age vs Attrition
-- Salary vs Attrition
-- Department-wise Attrition
-- Overtime Impact on Attrition
+* Attrition Distribution
+* Age vs Attrition
+* Salary vs Attrition
+* Department-wise Attrition
+* Overtime Impact on Attrition
 
-Key Findings:
+### Key Findings
 
-- Employees working overtime are more likely to leave.
-- Lower salary employees show higher attrition.
-- Research & Development has the highest attrition count.
-- Promotion delays contribute to attrition.
+* Employees working overtime are more likely to leave.
+* Lower salary employees show higher attrition.
+* Research & Development has the highest attrition count.
+* Promotion delays contribute to attrition.
 
 ---
 
@@ -54,12 +55,12 @@ Key Findings:
 
 Performed queries using MySQL:
 
-- Total Employees
-- Attrition Count
-- Attrition Percentage
-- Department-wise Attrition
-- Average Salary by Department
-- Overtime vs Attrition
+* Total Employees
+* Attrition Count
+* Attrition Percentage
+* Department-wise Attrition
+* Average Salary by Department
+* Overtime vs Attrition
 
 ---
 
@@ -67,27 +68,29 @@ Performed queries using MySQL:
 
 Created an interactive dashboard containing:
 
-- Total Employees KPI
-- Attrition Count KPI
-- Attrition Rate KPI
-- Department-wise Attrition
-- Overtime Analysis
-- Age vs Attrition
-- Interactive Slicers
+* Total Employees KPI
+* Attrition Count KPI
+* Attrition Rate KPI
+* Department-wise Attrition
+* Overtime Analysis
+* Age vs Attrition
+* Interactive Slicers
 
 ---
 
 ## Machine Learning
 
-Model Used:
+### Models Used
 
-- Logistic Regression
-- Balanced Logistic Regression
+* Logistic Regression
+* Balanced Logistic Regression
+* Random Forest Classifier
 
-Results:
+### Results
 
-- Logistic Regression Accuracy: 86.05%
-- Balanced Model Recall Improved from 8% to 51%
+* Logistic Regression Accuracy: 86.05%
+* Random Forest Accuracy: 86.73%
+* Balanced Logistic Regression Recall Improved from 8% to 51%
 
 ---
 
@@ -103,51 +106,58 @@ Based on coefficient analysis:
 
 ---
 
-
 ## Project Structure
 
 Employee_Attrition_Project/
 
 ├── data/
-│ └── WA_Fn-UseC_-HR-Employee-Attrition.csv
+│   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
 
 ├── notebooks/
-│ └── employee_attrition_analysis.ipynb
+│   └── employee_attrition_analysis.ipynb
 
 ├── sql/
-│ └── attrition_queries.sql
+│   └── employee_attrition_queries.sql
 
 ├── powerbi/
-│ └── Employee_Attrition_Dashboard.pbix
+│   └── Employee_Attrition_Dashboard.pbix
 
 ├── images/
-│ ├── attrition_distribution.png
-│ ├── age_vs_attrition.png
-│ ├── salary_vs_attrition.png
-│ ├── department_attrition.png
-│ └── dashboard.png
+│   ├── attrition_distribution.png
+│   ├── age_vs_attrition.png
+│   ├── salary_vs_attrition.png
+│   ├── department_attrition.png
+│   ├── feature_importance.png
+│   └── dashboard_screenshot.png
 
 ├── README.md
 
 ├── requirements.txt
 
+└── .gitignore
+
+---
+
+## Model Comparison
+
+| Model                        | Accuracy | Recall |
+| ---------------------------- | -------- | ------ |
+| Logistic Regression          | 86.05%   | 8%     |
+| Balanced Logistic Regression | 66.00%   | 51%    |
+| Random Forest                | 86.73%   | 10%    |
+
+### Conclusion
+
+Although Random Forest achieved the highest accuracy, Balanced Logistic Regression provided the best recall for identifying employees likely to leave and was therefore selected as the most business-relevant model.
+
+---
+
 ## Business Impact
 
 This project helps HR teams:
 
-- Identify employees at risk of leaving
-- Improve retention strategies
-- Reduce hiring costs
-- Improve workforce planning
-
-## Model Comparison
-
-| Model | Accuracy | Recall |
-|---------|---------|---------|
-| Logistic Regression | 86.05% | 8% |
-| Balanced Logistic Regression | 66.00% | 51% |
-| Random Forest | 86.73% | 10% |
-
-Conclusion:
-
-Although Random Forest achieved the highest accuracy, Balanced Logistic Regression provided the best recall for identifying employees likely to leave and was therefore selected as the most business-relevant model.
+* Identify employees at risk of leaving
+* Improve retention strategies
+* Reduce hiring costs
+* Improve workforce planning
+* Improve employee satisfaction through data-driven insights
